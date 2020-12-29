@@ -23,9 +23,5 @@ func newDeck() deck {
 	return cards
 }
 
-// Syntax (Slices)
-// fruits = ["apple","pawpaw","pineapple","apple"]
-// fruits[0:2] ====> fruits[startIndexIncludingThisIndex:endAtThisIndexExcludingIt]
-// fruits[:2] ====> start from the initial index: end at the 2 excluding 2
-// fruits[1:] ====> start from the index 1: end at the end of the slice
 // Notes (Good practice)
+// 1. Only use receivers where necesary e.g when creating a new deck you do not need to use a receiver
