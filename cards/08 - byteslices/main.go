@@ -9,5 +9,5 @@ func main() {
 }
 
 // Notes
-// strings and byte slices (golang's io.WriteFile(filename string, data []byte, perm os.FileMode)
-// ascitable.com
+// Truly finally understood how you slice data from golang slices
+// Also got reminded of the major difference between golang arrays and slices
