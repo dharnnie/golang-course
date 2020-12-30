@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -34,5 +36,16 @@ func (d deck) toString() string {
 	return strings.Join(s, ",")
 }
 
+func newDeckFromFile(filename string) deck {
+	bs, err := ioutil.ReadFile(filename)
+	if err != nil {
+		// Option 1  - log the error and return a call to newDeck()
+		fmt.Println("Error: ", err)
+		os.Exit(1)
+	}
+	s := strings.Split(string(bs), ",")
+	return deck(s) // we are able to do this because deck is an underlying []string type
+}
+
 // Notes (Good practice)
-// Make a file from a deck
+// Make a deck from a file
