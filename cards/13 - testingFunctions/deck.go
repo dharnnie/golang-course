@@ -23,7 +23,7 @@ func newDeck() deck {
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
-			card := suit + " of " + value
+			card := value + " of " + suit // had to switch this over to return the correct order
 			cards = append(cards, card)
 		}
 	}
